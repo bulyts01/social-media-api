@@ -1,4 +1,4 @@
-package ru.job4j.social_media_api;
+package ru.job4j.socialmedia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
