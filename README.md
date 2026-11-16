@@ -43,3 +43,24 @@
 ### URL для отправки GET запроса:
 
 http://localhost:8080/api/ping
+
+### Проверить сборку maven
+
+./mvnw clean verify
+
+### Подключение к локальной БД
+
+нужно в application.yml добавить конфиг
+spring:
+datasource:
+url: ${DB_URL:jdbc:postgresql://localhost:5432/social_media}
+username: ${DB_USERNAME:postgres}
+password: ${DB_PASSWORD:password}
+liquibase:
+change-log: classpath:db/changelog/db.changelog-master.sql
+
+далее создать мастер ченжлог (пока пустой), чтобы ликвибейз создала таблицы истории чейнжсетов
+
+далее подключиться к локальной бд с помощью средств idea или например dbeaver
+
+Но перед этим нужно установить драйвер PostreSQL
