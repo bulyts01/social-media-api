@@ -64,3 +64,17 @@ change-log: classpath:db/changelog/db.changelog-master.sql
 далее подключиться к локальной бд с помощью средств idea или например dbeaver
 
 Но перед этим нужно установить драйвер PostreSQL
+
+### Docker и запуск приложения
+
+#### Запуск образа Docker из настроенного compose файла и .env
+docker compose up -d
+
+#### Прогон тестов
+./mvnw test
+
+#### Запуск приложения
+./mvnw spring-boot:run
+
+#### Остановка контейнеров Docker без их удаления
+docker compose down
